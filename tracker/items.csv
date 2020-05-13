@@ -1,2 +1,2 @@
 all_div
-api.covid19india.org/raw_data4.json
+https://api.covid19india.org/csv/latest/raw_data1.csv
