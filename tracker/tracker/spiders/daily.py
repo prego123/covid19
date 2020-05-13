@@ -9,7 +9,7 @@ class DailyUpdate(scrapy.Spider):
 
         items = TrackerItem()
 
-        all_div =  response.css("tr:nth-child(1) td:nth-child(3)::text").extract()
+        all_div =  response.css("tr:nth-child(3) td:nth-child(3) , tr:nth-child(2) td:nth-child(3) , tr:nth-child(1) td:nth-child(3)::text").extract()
 
         items['all_div'] = all_div
         yield items

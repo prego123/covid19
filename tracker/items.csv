@@ -1,2 +1,2 @@
 all_div
-https://api.covid19india.org/csv/latest/raw_data1.csv
+"https://api.covid19india.org/csv/latest/raw_data1.csv,<td>https://api.covid19india.org/csv/latest/raw_data2.csv</td>,<td>https://api.covid19india.org/csv/latest/raw_data3.csv</td>"
