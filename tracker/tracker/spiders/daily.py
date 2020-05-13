@@ -1,21 +1,16 @@
 import scrapy
 from ..items import TrackerItem
 class DailyUpdate(scrapy.Spider):
-    name = 'quotes'
+    name = 'track'
     start_urls = [
-        'https://quotes.toscrape.com/'
+        'https://api.covid19india.org/'
     ]
     def parse(self, response):
 
         items = TrackerItem()
 
-        all_div_quotes = response.css("div.quote")
-        for quote in all_div_quotes:
-            title = quote.css("span.text::text").extract()
-            author = quote.css(".author::text").extract()
-            tag = quote.css(".tag::text").extract()
+        all_div =  response.css(".highlighter-rouge:nth-child(7)::text").extract()
 
-            items['title']=title
-            items['author']=author
-            items['tag']=tag
-            yield items
+        items['all_div'] = all_div
+        yield items
+
